@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab|Pacifico');
+
+body {
+    font-family: 'Josefin Slab', serif;
+}
+
+.change {
+    font-family: 'Pacifico', cursive;
+    font-weight: 700;
+}
+
+/* nav effect */
+.nav-item:before,
+.nav-item:after {
+    display: inline-block;
+    opacity: 0;
+    transition: transform 0.3s, opacity 0.2s;
+}
+
+.nav-item:before {
+    margin-right: 10px;
+    content: '[';
+    transform: translate(20px);
+}
+
+.nav-item:after {
+    margin-left: 10px;
+    content: ']';
+    transform: translate(-20px);
+}
+
+.nav-item:hover:before,
+.nav-item:hover:after,
+.nav-item:focus:before,
+.nav-item:focus:after {
+    opacity: 1;
+    transform: translate(0px);
+}
+
+/* first section */
+.first-section {
+    background: url('../assets/images/bg.jpg');
+    background-position: center bottom;
+}
+.first-section .row{
+    background: rgba(163, 124, 124, 0.4);
+    color: whitesmoke;
+    height: 90vh;
+}
+
+.first-section .row h1, p {
+    opacity: 1 !important;
+    font-weight: bolder;
+}
